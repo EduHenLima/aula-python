@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index,setCookie,redirect
+from . import views
 
 
 app_name = "aula3"
@@ -11,7 +11,11 @@ que o mesmo faz referencia ao init
 '''
 
 urlpatterns = [
-    path('', index),
-    path('cookie', setCookie),
-    path('uol', redirect),
+    path('', views.index),
+    path('cookie', views.setCookie),
+    path('uol', views.redirect),
+    path('<int:code>', views.show_code),
+    path('cat/<int:code>', views.catting),
+    path('get/', views.show_get_status),
+    path('post/', views.show_post_values),
 ]
