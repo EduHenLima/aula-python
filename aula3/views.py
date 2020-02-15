@@ -57,16 +57,15 @@ def show_post_values(request):
     if request.method == "POST":
         nome = request.POST.get("nome")
         sobrenome = request.POST.get("sobrenome")
-        head += f"<h1> Bem vindo {nome} {sobrenome} <h1>"
+        head += f"<h1> bem vindo {nome} {sobrenome}</h1>"
     html = """
-        <form method=POST">
-        <label for="nome">First name:</label><br>
-        <input type="text" id="nome" name="name" value=""><br>
-        <label for="sobrenome">Last name:</label><br>
-        <input type="text" id="sobrenome" name="sobrename" value=""><br><br>
-        <input type="submit" value="Submit">
-        </form> 
+    <form method=POST>
+    <label for="nome">First name:</label><br>
+    <input type="text" id="nome" name="nome" value=""><br>
+    <label for="sobrenome">Last name:</label><br>
+    <input type="text" id="sobrenome" name="sobrenome" value=""><br><br>
+    <input type="submit" value="Enviar">
+    </form> 
     """
-    
-    html_response = head+html
-    return HttpResponse(html_response)
+    html_to_response = head+html
+    return HttpResponse(html_to_response)
