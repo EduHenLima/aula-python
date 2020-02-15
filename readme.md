@@ -31,4 +31,11 @@ django-admin startproject cursodjango
 python manage.py migrate
 
 #Rodar o servidor
-python manage.py runserverwp3594888
+python manage.py runserver
+
+-----------------------------------------------------
+
+#Criando app
+python manage.py startapp aula3
+
+python manage.py startapp aula3
