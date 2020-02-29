@@ -38,4 +38,6 @@ python manage.py runserver
 #Criando app
 python manage.py startapp aula3
 
-python manage.py startapp aula3
+----------------------------------------------------
+#Criar as migrações que estão dentro do models.
+python manage.py makemigrations
