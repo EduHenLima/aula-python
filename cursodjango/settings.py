@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'aula3',
+    'aula4',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,9 @@ ROOT_URLCONF = 'cursodjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #Utilizamos para setar qual pasta queremos renderizar com o tempaltes
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        #Aqui setamos True para ir para o app caso o templates está vazio
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
